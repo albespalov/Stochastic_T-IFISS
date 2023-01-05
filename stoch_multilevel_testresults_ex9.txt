@@ -1,0 +1,1091 @@
+>> stoch_multilevel_testproblem
+
+Adaptive solution of reference stochastic diffusion problem.
+Choose specific example:
+   1. Square domain (-1,1)^2, analytic KL expansion, non-constant source
+   2. Square domain (0,1)^2,  Eigel synthetic random coefficient, constant source
+   3. Square domain (0,1)^2,  Powell synthetic random coefficient, constant source
+   4. L-shaped domain, synthetic random coefficient, constant source
+   5. L-shaped domain, Eigel synthetic random coefficient, constant source
+   6. L-shaped domain, Powell synthetic random coefficient, constant source
+   7. Crack domain, Eigel synthetic random coefficient, constant source
+   8. Crack domain, Powell synthetic random coefficient, non-constant source
+   9. Square domain (0,1)^2, cookie problem, constant source
+ : 9
+Desired error tolerance (default 5.0e-03) : 7e-03
+
+Spatial error estimation type:
+   2-level estimator
+
+Marking: combined or separate 1/2? (default 1) : 
+Spatial marking: elements/edges 1/2 (default 2) : 
+Marking strategy: maximum or Doerfler 1/2? (default 2) : 
+   threshold parameter    (default 0.4) : 
+
+Coarse grid generation for a unit square domain
+Grid parameter: 2 for underlying 8x4 grid (default is 4 for 32x16) : 
+
+Random variables distribution:
+Uniform or truncated Gaussian distribution 1/2? (default is 1) : 
+Number of active random variables? (default is 0) : 
+Accept initial index (0,0,0,...) yes/no? (1/0) (default 1) : 
+Default starting index: (0,0,0,...)
+Extra active parameters in detail index sets? (default is 1) : 9
+
+Run code in debug mode 1/0 (yes/no)? (default no) : 
+
+------------------------------------------------------------
+Iteration 1
+------------------------------------------------------------
+
+REFINE
+No refinement in the first adaptive step
+
+SOLVE
+Setting up stochastic P1 diffusion matrices... done (0.08470 sec)
+MINRES solution of the linear system:
+Call to STOCH_MULTILEVEL_xMINRES ...
+Bingo! Convergence in   1 iterations (0.00000 sec)
+Linear solver statistics:
+   Total ndof:         225
+Stochastic parameters:
+   Active parameters:  0
+   Polynomial degree:  0
+Computed solution:
+   Maximum mean value: 7.3610e-02
+   Maximum variance:   0.0000e+00
+   Energy norm:        1.8644e-01
+Totale SOLVE time = 0.12757 sec
+
+ESTIMATE
+A posteriori error estimation for P1 approximations:
+YP-error estimation
+   Spatial 2-level error estimator
+   YP-error estimation took 0.11731 sec
+XQ-error estimation
+   XQ-error estimation took 0.12208 sec
+-> Simplistic YP-estimate of energy error: 1.5110e-02
+-> Simplistic XQ-estimate of energy error: 2.5127e-02
+-> Simplistic estimate of energy error:    2.9320e-02
+Totale ESTIMATE time = 0.25149 sec
+
+MARK
+Combined marking
+Spatial marking
+    Mesh 1: 0/800 marked edges, 0/800 overall marked edges
+    Total: 0/800 marked edges, 0/800 overall marked edges
+Parametric marking
+    4/9 overall marked indices
+Total MARK time = 0.01089 sec
+Error estimates (marked indicators)
+    YP-estimate (overall marked elements/edges): 0.0000e+00
+    XQ-estimate (overall marked indices):        2.1235e-02
+
+------------------------------------------------------------
+Iteration 2
+------------------------------------------------------------
+
+REFINE
+Adaptive mesh refinement and polynomial enrichment
+Augmenting index set by
+ 0   0   0   1   0   0   0   0   0   0   0  ...
+ 0   0   0   0   0   0   0   1   0   0   0  ...
+ 0   0   0   0   0   1   0   0   0   0   0  ...
+ 0   1   0   0   0   0   0   0   0   0   0  ...
+Computing new 'Q' indset ...
+Total REFINE time = 0.02131 sec
+
+SOLVE
+Setting up stochastic P1 diffusion matrices... done (0.06532 sec)
+MINRES solution of the linear system:
+Call to STOCH_MULTILEVEL_xMINRES ...
+Bingo! Convergence in  12 iterations (0.09000 sec)
+Linear solver statistics:
+   Total ndof:         1125
+Stochastic parameters:
+   Active parameters:  4
+   Polynomial degree:  1
+Computed solution:
+   Maximum mean value: 7.4155e-02
+   Maximum variance:   3.2934e-05
+   Energy norm:        1.8708e-01
+Totale SOLVE time = 0.20911 sec
+
+ESTIMATE
+A posteriori error estimation for P1 approximations:
+YP-error estimation
+   Spatial 2-level error estimator
+   YP-error estimation took 0.29727 sec
+XQ-error estimation
+   XQ-error estimation took 0.46253 sec
+-> Simplistic YP-estimate of energy error: 1.5884e-02
+-> Simplistic XQ-estimate of energy error: 1.3960e-02
+-> Simplistic estimate of energy error:    2.1147e-02
+Totale ESTIMATE time = 0.78410 sec
+
+MARK
+Combined marking
+Spatial marking
+    Mesh 1: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 2: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 3: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 4: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 5: 0/800 marked edges, 0/800 overall marked edges
+    Total: 0/4000 marked edges, 0/4000 overall marked edges
+Parametric marking
+    5/55 overall marked indices
+Total MARK time = 0.01004 sec
+Error estimates (marked indicators)
+    YP-estimate (overall marked elements/edges): 0.0000e+00
+    XQ-estimate (overall marked indices):        1.3502e-02
+
+------------------------------------------------------------
+Iteration 3
+------------------------------------------------------------
+
+REFINE
+Adaptive mesh refinement and polynomial enrichment
+Augmenting index set by
+ 1   0   0   0   0   0   0   0   0   0   0   0   0   0   0  ...
+ 0   0   1   0   0   0   0   0   0   0   0   0   0   0   0  ...
+ 0   0   0   0   0   0   1   0   0   0   0   0   0   0   0  ...
+ 0   0   0   0   0   0   0   0   1   0   0   0   0   0   0  ...
+ 0   0   0   0   1   0   0   0   0   0   0   0   0   0   0  ...
+Computing new 'Q' indset ...
+Total REFINE time = 0.00546 sec
+
+SOLVE
+Setting up stochastic P1 diffusion matrices... done (0.12261 sec)
+MINRES solution of the linear system:
+Call to STOCH_MULTILEVEL_xMINRES ...
+Bingo! Convergence in  14 iterations (0.14000 sec)
+Linear solver statistics:
+   Total ndof:         2250
+Stochastic parameters:
+   Active parameters:  9
+   Polynomial degree:  1
+Computed solution:
+   Maximum mean value: 7.6144e-02
+   Maximum variance:   3.7067e-05
+   Energy norm:        1.8823e-01
+Totale SOLVE time = 0.30281 sec
+
+ESTIMATE
+A posteriori error estimation for P1 approximations:
+YP-error estimation
+   Spatial 2-level error estimator
+   YP-error estimation took 0.49853 sec
+XQ-error estimation
+   XQ-error estimation took 1.07815 sec
+-> Simplistic YP-estimate of energy error: 1.7256e-02
+-> Simplistic XQ-estimate of energy error: 5.8366e-03
+-> Simplistic estimate of energy error:    1.8217e-02
+Totale ESTIMATE time = 1.59521 sec
+
+MARK
+Combined marking
+Spatial marking
+    Mesh 1: 23/800 marked edges, 23/800 overall marked edges
+    Mesh 2: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 3: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 4: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 5: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 6: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 7: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 8: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 9: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 10: 0/800 marked edges, 0/800 overall marked edges
+    Total: 23/8000 marked edges, 23/8000 overall marked edges
+Parametric marking
+    5/135 overall marked indices
+Total MARK time = 0.00507 sec
+Error estimates (marked indicators)
+    YP-estimate (overall marked elements/edges): 1.0376e-02
+    XQ-estimate (overall marked indices):        5.1574e-03
+
+------------------------------------------------------------
+Iteration 4
+------------------------------------------------------------
+
+REFINE
+Adaptive mesh refinement and polynomial enrichment
+Refinement of mesh 1... done
+Augmenting index set by
+ 0   0   0   2   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0  ...
+ 0   0   0   0   0   0   0   2   0   0   0   0   0   0   0   0   0   0   0   0  ...
+ 0   0   0   0   0   2   0   0   0   0   0   0   0   0   0   0   0   0   0   0  ...
+ 0   2   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0  ...
+ 0   0   0   0   2   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0  ...
+Computing new 'Q' indset ...
+Total REFINE time = 0.01874 sec
+
+SOLVE
+Setting up stochastic P1 diffusion matrices... done (0.23269 sec)
+MINRES solution of the linear system:
+Call to STOCH_MULTILEVEL_xMINRES ...
+Bingo! Convergence in  17 iterations (0.42000 sec)
+Linear solver statistics:
+   Total ndof:         3398
+Stochastic parameters:
+   Active parameters:  9
+   Polynomial degree:  2
+Computed solution:
+   Maximum mean value: 7.6732e-02
+   Maximum variance:   4.2146e-05
+   Energy norm:        1.8863e-01
+Totale SOLVE time = 0.51237 sec
+
+ESTIMATE
+A posteriori error estimation for P1 approximations:
+YP-error estimation
+   Spatial 2-level error estimator
+   YP-error estimation took 0.78751 sec
+XQ-error estimation
+   XQ-error estimation took 1.66450 sec
+-> Simplistic YP-estimate of energy error: 1.4672e-02
+-> Simplistic XQ-estimate of energy error: 3.3021e-03
+-> Simplistic estimate of energy error:    1.5039e-02
+Totale ESTIMATE time = 2.47320 sec
+
+MARK
+Combined marking
+Spatial marking
+    Mesh 1: 52/869 marked edges, 55/869 overall marked edges
+    Mesh 2: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 3: 5/800 marked edges, 7/800 overall marked edges
+    Mesh 4: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 5: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 6: 5/800 marked edges, 7/800 overall marked edges
+    Mesh 7: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 8: 4/800 marked edges, 4/800 overall marked edges
+    Mesh 9: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 10: 5/800 marked edges, 7/800 overall marked edges
+    Mesh 11: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 12: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 13: 5/800 marked edges, 7/800 overall marked edges
+    Mesh 14: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 15: 0/800 marked edges, 0/800 overall marked edges
+    Total: 76/12069 marked edges, 87/12069 overall marked edges
+Parametric marking
+    5/220 overall marked indices
+Total MARK time = 0.00830 sec
+Error estimates (marked indicators)
+    YP-estimate (overall marked elements/edges): 9.3691e-03
+    XQ-estimate (overall marked indices):        2.1271e-03
+
+------------------------------------------------------------
+Iteration 5
+------------------------------------------------------------
+
+REFINE
+Adaptive mesh refinement and polynomial enrichment
+Refinement of mesh 1... done
+Refinement of mesh 3... done
+Refinement of mesh 6... done
+Refinement of mesh 8... done
+Refinement of mesh 10... done
+Refinement of mesh 13... done
+Augmenting index set by
+ 0   0   0   0   3   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0  ...
+ 0   0   2   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0  ...
+ 2   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0  ...
+ 0   0   0   0   0   0   0   0   2   0   0   0   0   0   0   0   0   0   0   0  ...
+ 0   0   0   0   0   0   2   0   0   0   0   0   0   0   0   0   0   0   0   0  ...
+Computing new 'Q' indset ...
+Total REFINE time = 0.07547 sec
+
+SOLVE
+Setting up stochastic P1 diffusion matrices... done (0.33384 sec)
+MINRES solution of the linear system:
+Call to STOCH_MULTILEVEL_xMINRES ...
+Bingo! Convergence in  17 iterations (0.77000 sec)
+Linear solver statistics:
+   Total ndof:         4610
+Stochastic parameters:
+   Active parameters:  9
+   Polynomial degree:  3
+Computed solution:
+   Maximum mean value: 7.7178e-02
+   Maximum variance:   4.3052e-05
+   Energy norm:        1.8891e-01
+Totale SOLVE time = 0.72057 sec
+
+ESTIMATE
+A posteriori error estimation for P1 approximations:
+YP-error estimation
+   Spatial 2-level error estimator
+   YP-error estimation took 1.10471 sec
+XQ-error estimation
+   XQ-error estimation took 2.34472 sec
+-> Simplistic YP-estimate of energy error: 1.2394e-02
+-> Simplistic XQ-estimate of energy error: 2.6530e-03
+-> Simplistic estimate of energy error:    1.2675e-02
+Totale ESTIMATE time = 3.47321 sec
+
+MARK
+Combined marking
+Spatial marking
+    Mesh 1: 94/1034 marked edges, 138/1034 overall marked edges
+    Mesh 2: 5/800 marked edges, 5/800 overall marked edges
+    Mesh 3: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 4: 7/821 marked edges, 11/821 overall marked edges
+    Mesh 5: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 6: 5/800 marked edges, 5/800 overall marked edges
+    Mesh 7: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 8: 7/821 marked edges, 11/821 overall marked edges
+    Mesh 9: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 10: 0/812 marked edges, 0/812 overall marked edges
+    Mesh 11: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 12: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 13: 7/821 marked edges, 11/821 overall marked edges
+    Mesh 14: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 15: 5/800 marked edges, 5/800 overall marked edges
+    Mesh 16: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 17: 7/821 marked edges, 11/821 overall marked edges
+    Mesh 18: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 19: 5/800 marked edges, 5/800 overall marked edges
+    Mesh 20: 0/800 marked edges, 0/800 overall marked edges
+    Total: 142/16330 marked edges, 202/16330 overall marked edges
+Parametric marking
+    9/305 overall marked indices
+Total MARK time = 0.00779 sec
+Error estimates (marked indicators)
+    YP-estimate (overall marked elements/edges): 8.0330e-03
+    XQ-estimate (overall marked indices):        2.0267e-03
+
+------------------------------------------------------------
+Iteration 6
+------------------------------------------------------------
+
+REFINE
+Adaptive mesh refinement and polynomial enrichment
+Refinement of mesh 1... done
+Refinement of mesh 2... done
+Refinement of mesh 4... done
+Refinement of mesh 6... done
+Refinement of mesh 8... done
+Refinement of mesh 13... done
+Refinement of mesh 15... done
+Refinement of mesh 17... done
+Refinement of mesh 19... done
+Augmenting index set by
+ 0   0   0   0   4   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0  ...
+ 0   0   0   0   0   0   0   3   0   0   0   0   0   0   0   0   0   0   0   0  ...
+ 0   3   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0  ...
+ 0   0   0   0   0   3   0   0   0   0   0   0   0   0   0   0   0   0   0   0  ...
+ 0   0   0   3   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0  ...
+ 0   1   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0  ...
+ 0   0   0   0   1   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0  ...
+ 0   0   0   0   1   1   0   0   0   0   0   0   0   0   0   0   0   0   0   0  ...
+ 0   0   0   1   1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0  ...
+Computing new 'Q' indset ...
+Total REFINE time = 0.09621 sec
+
+SOLVE
+Setting up stochastic P1 diffusion matrices... done (0.51129 sec)
+MINRES solution of the linear system:
+Call to STOCH_MULTILEVEL_xMINRES ...
+Bingo! Convergence in  18 iterations (0.76000 sec)
+Linear solver statistics:
+   Total ndof:         6822
+Stochastic parameters:
+   Active parameters:  9
+   Polynomial degree:  4
+Computed solution:
+   Maximum mean value: 7.7352e-02
+   Maximum variance:   4.3841e-05
+   Energy norm:        1.8913e-01
+Totale SOLVE time = 1.08504 sec
+
+ESTIMATE
+A posteriori error estimation for P1 approximations:
+YP-error estimation
+   Spatial 2-level error estimator
+   YP-error estimation took 1.90540 sec
+XQ-error estimation
+   XQ-error estimation took 3.40570 sec
+-> Simplistic YP-estimate of energy error: 1.0370e-02
+-> Simplistic XQ-estimate of energy error: 1.8662e-03
+-> Simplistic estimate of energy error:    1.0537e-02
+Totale ESTIMATE time = 5.33377 sec
+
+MARK
+Combined marking
+Spatial marking
+    Mesh 1: 173/1433 marked edges, 259/1433 overall marked edges
+    Mesh 2: 5/815 marked edges, 13/815 overall marked edges
+    Mesh 3: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 4: 6/854 marked edges, 10/854 overall marked edges
+    Mesh 5: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 6: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 7: 5/815 marked edges, 13/815 overall marked edges
+    Mesh 8: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 9: 6/854 marked edges, 10/854 overall marked edges
+    Mesh 10: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 11: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 12: 8/812 marked edges, 16/812 overall marked edges
+    Mesh 13: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 14: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 15: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 16: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 17: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 18: 6/854 marked edges, 10/854 overall marked edges
+    Mesh 19: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 20: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 21: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 22: 5/815 marked edges, 13/815 overall marked edges
+    Mesh 23: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 24: 6/854 marked edges, 10/854 overall marked edges
+    Mesh 25: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 26: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 27: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 28: 5/815 marked edges, 13/815 overall marked edges
+    Mesh 29: 0/800 marked edges, 0/800 overall marked edges
+    Total: 225/24121 marked edges, 367/24121 overall marked edges
+Parametric marking
+    13/444 overall marked indices
+Total MARK time = 0.00705 sec
+Error estimates (marked indicators)
+    YP-estimate (overall marked elements/edges): 6.7714e-03
+    XQ-estimate (overall marked indices):        1.6276e-03
+
+------------------------------------------------------------
+Iteration 7
+------------------------------------------------------------
+
+REFINE
+Adaptive mesh refinement and polynomial enrichment
+Refinement of mesh 1... done
+Refinement of mesh 2... done
+Refinement of mesh 4... done
+Refinement of mesh 7... done
+Refinement of mesh 9... done
+Refinement of mesh 12... done
+Refinement of mesh 18... done
+Refinement of mesh 22... done
+Refinement of mesh 24... done
+Refinement of mesh 28... done
+Augmenting index set by
+ 0   0   0   0   0   0   0   1   1   0   0   0   0   0   0   0   0   0   0   0  ...
+ 1   1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0  ...
+ 0   0   1   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0   0   0  ...
+ 0   0   0   0   0   1   0   0   1   0   0   0   0   0   0   0   0   0   0   0  ...
+ 1   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0  ...
+ 0   1   1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0  ...
+ 0   0   0   1   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0   0  ...
+ 0   0   0   0   0   0   1   1   0   0   0   0   0   0   0   0   0   0   0   0  ...
+ 0   0   0   0   5   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0  ...
+ 0   0   0   1   0   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0  ...
+ 0   1   0   1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0  ...
+ 0   1   0   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0   0   0  ...
+ 0   0   0   0   0   1   0   1   0   0   0   0   0   0   0   0   0   0   0   0  ...
+Computing new 'Q' indset ...
+Total REFINE time = 0.09233 sec
+
+SOLVE
+Setting up stochastic P1 diffusion matrices... done (0.86154 sec)
+MINRES solution of the linear system:
+Call to STOCH_MULTILEVEL_xMINRES ...
+Bingo! Convergence in  19 iterations (1.01000 sec)
+Linear solver statistics:
+   Total ndof:         10097
+Stochastic parameters:
+   Active parameters:  9
+   Polynomial degree:  5
+Computed solution:
+   Maximum mean value: 7.7654e-02
+   Maximum variance:   4.6343e-05
+   Energy norm:        1.8927e-01
+Totale SOLVE time = 1.74451 sec
+
+ESTIMATE
+A posteriori error estimation for P1 approximations:
+YP-error estimation
+   Spatial 2-level error estimator
+   YP-error estimation took 3.25051 sec
+XQ-error estimation
+   XQ-error estimation took 4.86573 sec
+-> Simplistic YP-estimate of energy error: 9.1456e-03
+-> Simplistic XQ-estimate of energy error: 1.0114e-03
+-> Simplistic estimate of energy error:    9.2013e-03
+Totale ESTIMATE time = 8.14277 sec
+
+MARK
+Combined marking
+Spatial marking
+    Mesh 1: 149/2193 marked edges, 196/2193 overall marked edges
+    Mesh 2: 18/854 marked edges, 25/854 overall marked edges
+    Mesh 3: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 4: 16/884 marked edges, 37/884 overall marked edges
+    Mesh 5: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 6: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 7: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 8: 19/854 marked edges, 25/854 overall marked edges
+    Mesh 9: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 10: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 11: 16/884 marked edges, 37/884 overall marked edges
+    Mesh 12: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 13: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 14: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 15: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 16: 8/860 marked edges, 24/860 overall marked edges
+    Mesh 17: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 18: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 19: 4/800 marked edges, 4/800 overall marked edges
+    Mesh 20: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 21: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 22: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 23: 16/884 marked edges, 37/884 overall marked edges
+    Mesh 24: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 25: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 26: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 27: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 28: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 29: 18/854 marked edges, 25/854 overall marked edges
+    Mesh 30: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 31: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 32: 16/884 marked edges, 37/884 overall marked edges
+    Mesh 33: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 34: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 35: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 36: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 37: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 38: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 39: 19/854 marked edges, 25/854 overall marked edges
+    Mesh 40: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 41: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 42: 0/800 marked edges, 0/800 overall marked edges
+    Total: 299/35605 marked edges, 472/35605 overall marked edges
+Parametric marking
+    1/605 overall marked indices
+Total MARK time = 0.01494 sec
+Error estimates (marked indicators)
+    YP-estimate (overall marked elements/edges): 6.0464e-03
+    XQ-estimate (overall marked indices):        2.9233e-04
+
+------------------------------------------------------------
+Iteration 8
+------------------------------------------------------------
+
+REFINE
+Adaptive mesh refinement and polynomial enrichment
+Refinement of mesh 1... done
+Refinement of mesh 2... done
+Refinement of mesh 4... done
+Refinement of mesh 8... done
+Refinement of mesh 11... done
+Refinement of mesh 16... done
+Refinement of mesh 19... done
+Refinement of mesh 23... done
+Refinement of mesh 29... done
+Refinement of mesh 32... done
+Refinement of mesh 39... done
+Augmenting index set by
+ 0   0   0   0   6   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0  ...
+Computing new 'Q' indset ...
+Total REFINE time = 0.11688 sec
+
+SOLVE
+Setting up stochastic P1 diffusion matrices... done (0.99575 sec)
+MINRES solution of the linear system:
+Call to STOCH_MULTILEVEL_xMINRES ...
+Bingo! Convergence in  21 iterations (1.19000 sec)
+Linear solver statistics:
+   Total ndof:         10778
+Stochastic parameters:
+   Active parameters:  9
+   Polynomial degree:  6
+Computed solution:
+   Maximum mean value: 7.7499e-02
+   Maximum variance:   4.8702e-05
+   Energy norm:        1.8941e-01
+Totale SOLVE time = 2.01143 sec
+
+ESTIMATE
+A posteriori error estimation for P1 approximations:
+YP-error estimation
+   Spatial 2-level error estimator
+   YP-error estimation took 3.83576 sec
+XQ-error estimation
+   XQ-error estimation took 5.23408 sec
+-> Simplistic YP-estimate of energy error: 8.1388e-03
+-> Simplistic XQ-estimate of energy error: 9.8333e-04
+-> Simplistic estimate of energy error:    8.1980e-03
+Totale ESTIMATE time = 9.09320 sec
+
+MARK
+Combined marking
+Spatial marking
+    Mesh 1: 223/2773 marked edges, 323/2773 overall marked edges
+    Mesh 2: 15/929 marked edges, 27/929 overall marked edges
+    Mesh 3: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 4: 27/993 marked edges, 43/993 overall marked edges
+    Mesh 5: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 6: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 7: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 8: 15/929 marked edges, 27/929 overall marked edges
+    Mesh 9: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 10: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 11: 29/993 marked edges, 47/993 overall marked edges
+    Mesh 12: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 13: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 14: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 15: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 16: 16/932 marked edges, 40/932 overall marked edges
+    Mesh 17: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 18: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 19: 8/812 marked edges, 16/812 overall marked edges
+    Mesh 20: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 21: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 22: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 23: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 24: 27/993 marked edges, 43/993 overall marked edges
+    Mesh 25: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 26: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 27: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 28: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 29: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 30: 15/929 marked edges, 27/929 overall marked edges
+    Mesh 31: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 32: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 33: 28/993 marked edges, 45/993 overall marked edges
+    Mesh 34: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 35: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 36: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 37: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 38: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 39: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 40: 15/929 marked edges, 27/929 overall marked edges
+    Mesh 41: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 42: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 43: 0/800 marked edges, 0/800 overall marked edges
+    Total: 418/37805 marked edges, 665/37805 overall marked edges
+Parametric marking
+    10/622 overall marked indices
+Total MARK time = 0.01231 sec
+Error estimates (marked indicators)
+    YP-estimate (overall marked elements/edges): 5.3413e-03
+    XQ-estimate (overall marked indices):        6.6566e-04
+
+------------------------------------------------------------
+Iteration 9
+------------------------------------------------------------
+
+REFINE
+Adaptive mesh refinement and polynomial enrichment
+Refinement of mesh 1... done
+Refinement of mesh 2... done
+Refinement of mesh 4... done
+Refinement of mesh 8... done
+Refinement of mesh 11... done
+Refinement of mesh 16... done
+Refinement of mesh 19... done
+Refinement of mesh 24... done
+Refinement of mesh 30... done
+Refinement of mesh 33... done
+Refinement of mesh 40... done
+Augmenting index set by
+ 0   1   0   0   0   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0  ...
+ 0   0   0   1   0   1   0   0   0   0   0   0   0   0   0   0   0   0   0   0  ...
+ 0   0   0   0   0   4   0   0   0   0   0   0   0   0   0   0   0   0   0   0  ...
+ 0   4   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0  ...
+ 0   0   0   0   0   0   0   4   0   0   0   0   0   0   0   0   0   0   0   0  ...
+ 0   0   0   4   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0  ...
+ 0   0   1   0   1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0  ...
+ 0   0   0   0   1   0   0   0   1   0   0   0   0   0   0   0   0   0   0   0  ...
+ 1   0   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0  ...
+ 0   0   0   0   1   0   1   0   0   0   0   0   0   0   0   0   0   0   0   0  ...
+Computing new 'Q' indset ...
+Total REFINE time = 0.12722 sec
+
+SOLVE
+Setting up stochastic P1 diffusion matrices... done (1.34999 sec)
+MINRES solution of the linear system:
+Call to STOCH_MULTILEVEL_xMINRES ...
+Bingo! Convergence in  23 iterations (1.56000 sec)
+Linear solver statistics:
+   Total ndof:         13661
+Stochastic parameters:
+   Active parameters:  9
+   Polynomial degree:  6
+Computed solution:
+   Maximum mean value: 7.7650e-02
+   Maximum variance:   5.0316e-05
+   Energy norm:        1.8952e-01
+Totale SOLVE time = 2.78115 sec
+
+ESTIMATE
+A posteriori error estimation for P1 approximations:
+YP-error estimation
+   Spatial 2-level error estimator
+   YP-error estimation took 5.17165 sec
+XQ-error estimation
+   XQ-error estimation took 6.57441 sec
+-> Simplistic YP-estimate of energy error: 7.2355e-03
+-> Simplistic XQ-estimate of energy error: 7.5218e-04
+-> Simplistic estimate of energy error:    7.2745e-03
+Totale ESTIMATE time = 11.77736 sec
+
+MARK
+Combined marking
+Spatial marking
+    Mesh 1: 253/3726 marked edges, 369/3726 overall marked edges
+    Mesh 2: 24/1008 marked edges, 42/1008 overall marked edges
+    Mesh 3: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 4: 42/1120 marked edges, 64/1120 overall marked edges
+    Mesh 5: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 6: 1/800 marked edges, 3/800 overall marked edges
+    Mesh 7: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 8: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 9: 24/1008 marked edges, 42/1008 overall marked edges
+    Mesh 10: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 11: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 12: 42/1132 marked edges, 68/1132 overall marked edges
+    Mesh 13: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 14: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 15: 1/800 marked edges, 3/800 overall marked edges
+    Mesh 16: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 17: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 18: 20/1052 marked edges, 52/1052 overall marked edges
+    Mesh 19: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 20: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 21: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 22: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 23: 12/860 marked edges, 28/860 overall marked edges
+    Mesh 24: 12/800 marked edges, 20/800 overall marked edges
+    Mesh 25: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 26: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 27: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 28: 42/1120 marked edges, 64/1120 overall marked edges
+    Mesh 29: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 30: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 31: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 32: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 33: 1/800 marked edges, 3/800 overall marked edges
+    Mesh 34: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 35: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 36: 24/1008 marked edges, 42/1008 overall marked edges
+    Mesh 37: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 38: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 39: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 40: 42/1126 marked edges, 66/1126 overall marked edges
+    Mesh 41: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 42: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 43: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 44: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 45: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 46: 1/800 marked edges, 3/800 overall marked edges
+    Mesh 47: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 48: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 49: 24/1008 marked edges, 42/1008 overall marked edges
+    Mesh 50: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 51: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 52: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 53: 0/800 marked edges, 0/800 overall marked edges
+    Total: 565/47768 marked edges, 911/47768 overall marked edges
+Parametric marking
+    9/744 overall marked indices
+Total MARK time = 0.01667 sec
+Error estimates (marked indicators)
+    YP-estimate (overall marked elements/edges): 4.7587e-03
+    XQ-estimate (overall marked indices):        4.8689e-04
+
+------------------------------------------------------------
+Iteration 10
+------------------------------------------------------------
+
+REFINE
+Adaptive mesh refinement and polynomial enrichment
+Refinement of mesh 1... done
+Refinement of mesh 2... done
+Refinement of mesh 4... done
+Refinement of mesh 6... done
+Refinement of mesh 9... done
+Refinement of mesh 12... done
+Refinement of mesh 15... done
+Refinement of mesh 18... done
+Refinement of mesh 23... done
+Refinement of mesh 24... done
+Refinement of mesh 28... done
+Refinement of mesh 33... done
+Refinement of mesh 36... done
+Refinement of mesh 40... done
+Refinement of mesh 46... done
+Refinement of mesh 49... done
+Augmenting index set by
+ 0   0   0   0   7   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0  ...
+ 0   0   0   0   0   0   3   0   0   0   0   0   0   0   0   0   0   0   0   0  ...
+ 0   0   3   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0  ...
+ 0   0   0   0   0   0   0   0   3   0   0   0   0   0   0   0   0   0   0   0  ...
+ 3   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0  ...
+ 0   0   0   0   2   1   0   0   0   0   0   0   0   0   0   0   0   0   0   0  ...
+ 0   1   0   0   2   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0  ...
+ 0   0   0   0   2   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0  ...
+ 0   0   0   1   2   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0  ...
+Computing new 'Q' indset ...
+Total REFINE time = 0.16660 sec
+
+SOLVE
+Setting up stochastic P1 diffusion matrices... done (1.78476 sec)
+MINRES solution of the linear system:
+Call to STOCH_MULTILEVEL_xMINRES ...
+Bingo! Convergence in  25 iterations (2.02000 sec)
+Linear solver statistics:
+   Total ndof:         16573
+Stochastic parameters:
+   Active parameters:  9
+   Polynomial degree:  7
+Computed solution:
+   Maximum mean value: 7.7666e-02
+   Maximum variance:   5.3923e-05
+   Energy norm:        1.8958e-01
+Totale SOLVE time = 3.69878 sec
+
+ESTIMATE
+A posteriori error estimation for P1 approximations:
+YP-error estimation
+   Spatial 2-level error estimator
+   YP-error estimation took 6.98369 sec
+XQ-error estimation
+   XQ-error estimation took 7.84162 sec
+-> Simplistic YP-estimate of energy error: 6.4657e-03
+-> Simplistic XQ-estimate of energy error: 5.9779e-04
+-> Simplistic estimate of energy error:    6.4933e-03
+Totale ESTIMATE time = 14.86094 sec
+
+MARK
+Combined marking
+Spatial marking
+    Mesh 1: 406/4809 marked edges, 628/4809 overall marked edges
+    Mesh 2: 18/1134 marked edges, 42/1134 overall marked edges
+    Mesh 3: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 4: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 5: 52/1312 marked edges, 108/1312 overall marked edges
+    Mesh 6: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 7: 3/809 marked edges, 7/809 overall marked edges
+    Mesh 8: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 9: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 10: 18/1134 marked edges, 42/1134 overall marked edges
+    Mesh 11: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 12: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 13: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 14: 50/1336 marked edges, 100/1336 overall marked edges
+    Mesh 15: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 16: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 17: 2/809 marked edges, 6/809 overall marked edges
+    Mesh 18: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 19: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 20: 16/1208 marked edges, 36/1208 overall marked edges
+    Mesh 21: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 22: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 23: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 24: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 25: 16/944 marked edges, 48/944 overall marked edges
+    Mesh 26: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 27: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 28: 12/860 marked edges, 28/860 overall marked edges
+    Mesh 29: 4/800 marked edges, 4/800 overall marked edges
+    Mesh 30: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 31: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 32: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 33: 52/1312 marked edges, 108/1312 overall marked edges
+    Mesh 34: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 35: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 36: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 37: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 38: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 39: 3/809 marked edges, 7/809 overall marked edges
+    Mesh 40: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 41: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 42: 18/1134 marked edges, 42/1134 overall marked edges
+    Mesh 43: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 44: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 45: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 46: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 47: 51/1324 marked edges, 104/1324 overall marked edges
+    Mesh 48: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 49: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 50: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 51: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 52: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 53: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 54: 3/809 marked edges, 7/809 overall marked edges
+    Mesh 55: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 56: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 57: 18/1134 marked edges, 42/1134 overall marked edges
+    Mesh 58: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 59: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 60: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 61: 0/800 marked edges, 0/800 overall marked edges
+    Mesh 62: 0/800 marked edges, 0/800 overall marked edges
+    Total: 742/57677 marked edges, 1359/57677 overall marked edges
+Parametric marking
+    2/887 overall marked indices
+Total MARK time = 0.01327 sec
+Error estimates (marked indicators)
+    YP-estimate (overall marked elements/edges): 4.2556e-03
+    XQ-estimate (overall marked indices):        1.6107e-04
+
+--------------------------------------------------
+Tolerance reached!
+--------------------------------------------------
+
+Total elapsed time:                71.880 sec
+Total iterations needed:             10
+Final estimated energy error:        6.4933e-03
+Final number of degrees of freedom:  16573
+-----------------------------------------
+Evolution of the index set:
+  0    0    0    0    0    0    0    0    0   ...
+  -----------------------------------------  iter = 2
+  0    0    0    1    0    0    0    0    0   ...
+  0    0    0    0    0    0    0    1    0   ...
+  0    0    0    0    0    1    0    0    0   ...
+  0    1    0    0    0    0    0    0    0   ...
+  -----------------------------------------  iter = 3
+  1    0    0    0    0    0    0    0    0   ...
+  0    0    1    0    0    0    0    0    0   ...
+  0    0    0    0    0    0    1    0    0   ...
+  0    0    0    0    0    0    0    0    1   ...
+  0    0    0    0    1    0    0    0    0   ...
+  -----------------------------------------  iter = 4
+  0    0    0    2    0    0    0    0    0   ...
+  0    0    0    0    0    0    0    2    0   ...
+  0    0    0    0    0    2    0    0    0   ...
+  0    2    0    0    0    0    0    0    0   ...
+  0    0    0    0    2    0    0    0    0   ...
+  -----------------------------------------  iter = 5
+  0    0    0    0    3    0    0    0    0   ...
+  0    0    2    0    0    0    0    0    0   ...
+  2    0    0    0    0    0    0    0    0   ...
+  0    0    0    0    0    0    0    0    2   ...
+  0    0    0    0    0    0    2    0    0   ...
+  -----------------------------------------  iter = 6
+  0    0    0    0    4    0    0    0    0   ...
+  0    0    0    0    0    0    0    3    0   ...
+  0    3    0    0    0    0    0    0    0   ...
+  0    0    0    0    0    3    0    0    0   ...
+  0    0    0    3    0    0    0    0    0   ...
+  0    1    0    0    1    0    0    0    0   ...
+  0    0    0    0    1    0    0    1    0   ...
+  0    0    0    0    1    1    0    0    0   ...
+  0    0    0    1    1    0    0    0    0   ...
+  -----------------------------------------  iter = 7
+  0    0    0    0    0    0    0    1    1   ...
+  1    1    0    0    0    0    0    0    0   ...
+  0    0    1    0    0    1    0    0    0   ...
+  0    0    0    0    0    1    0    0    1   ...
+  1    0    0    1    0    0    0    0    0   ...
+  0    1    1    0    0    0    0    0    0   ...
+  0    0    0    1    0    0    1    0    0   ...
+  0    0    0    0    0    0    1    1    0   ...
+  0    0    0    0    5    0    0    0    0   ...
+  0    0    0    1    0    0    0    1    0   ...
+  0    1    0    1    0    0    0    0    0   ...
+  0    1    0    0    0    1    0    0    0   ...
+  0    0    0    0    0    1    0    1    0   ...
+  -----------------------------------------  iter = 8
+  0    0    0    0    6    0    0    0    0   ...
+  -----------------------------------------  iter = 9
+  0    1    0    0    0    0    0    1    0   ...
+  0    0    0    1    0    1    0    0    0   ...
+  0    0    0    0    0    4    0    0    0   ...
+  0    4    0    0    0    0    0    0    0   ...
+  0    0    0    0    0    0    0    4    0   ...
+  0    0    0    4    0    0    0    0    0   ...
+  0    0    1    0    1    0    0    0    0   ...
+  0    0    0    0    1    0    0    0    1   ...
+  1    0    0    0    1    0    0    0    0   ...
+  0    0    0    0    1    0    1    0    0   ...
+  -----------------------------------------  iter = 10
+  0    0    0    0    7    0    0    0    0   ...
+  0    0    0    0    0    0    3    0    0   ...
+  0    0    3    0    0    0    0    0    0   ...
+  0    0    0    0    0    0    0    0    3   ...
+  3    0    0    0    0    0    0    0    0   ...
+  0    0    0    0    2    1    0    0    0   ...
+  0    1    0    0    2    0    0    0    0   ...
+  0    0    0    0    2    0    0    1    0   ...
+  0    0    0    1    2    0    0    0    0   ...
+Sorted final index set:
+  0    0    0    0    0    0    0    0    0   ...
+  0    0    0    0    0    0    0    0    1   ...
+  0    0    0    0    0    0    0    0    2   ...
+  0    0    0    0    0    0    0    0    3   ...
+  0    0    0    0    0    0    0    1    0   ...
+  0    0    0    0    0    0    0    1    1   ...
+  0    0    0    0    0    0    0    2    0   ...
+  0    0    0    0    0    0    0    3    0   ...
+  0    0    0    0    0    0    0    4    0   ...
+  0    0    0    0    0    0    1    0    0   ...
+  0    0    0    0    0    0    1    1    0   ...
+  0    0    0    0    0    0    2    0    0   ...
+  0    0    0    0    0    0    3    0    0   ...
+  0    0    0    0    0    1    0    0    0   ...
+  0    0    0    0    0    1    0    0    1   ...
+  0    0    0    0    0    1    0    1    0   ...
+  0    0    0    0    0    2    0    0    0   ...
+  0    0    0    0    0    3    0    0    0   ...
+  0    0    0    0    0    4    0    0    0   ...
+  0    0    0    0    1    0    0    0    0   ...
+  0    0    0    0    1    0    0    0    1   ...
+  0    0    0    0    1    0    0    1    0   ...
+  0    0    0    0    1    0    1    0    0   ...
+  0    0    0    0    1    1    0    0    0   ...
+  0    0    0    0    2    0    0    0    0   ...
+  0    0    0    0    2    0    0    1    0   ...
+  0    0    0    0    2    1    0    0    0   ...
+  0    0    0    0    3    0    0    0    0   ...
+  0    0    0    0    4    0    0    0    0   ...
+  0    0    0    0    5    0    0    0    0   ...
+  0    0    0    0    6    0    0    0    0   ...
+  0    0    0    0    7    0    0    0    0   ...
+  0    0    0    1    0    0    0    0    0   ...
+  0    0    0    1    0    0    0    1    0   ...
+  0    0    0    1    0    0    1    0    0   ...
+  0    0    0    1    0    1    0    0    0   ...
+  0    0    0    1    1    0    0    0    0   ...
+  0    0    0    1    2    0    0    0    0   ...
+  0    0    0    2    0    0    0    0    0   ...
+  0    0    0    3    0    0    0    0    0   ...
+  0    0    0    4    0    0    0    0    0   ...
+  0    0    1    0    0    0    0    0    0   ...
+  0    0    1    0    0    1    0    0    0   ...
+  0    0    1    0    1    0    0    0    0   ...
+  0    0    2    0    0    0    0    0    0   ...
+  0    0    3    0    0    0    0    0    0   ...
+  0    1    0    0    0    0    0    0    0   ...
+  0    1    0    0    0    0    0    1    0   ...
+  0    1    0    0    0    1    0    0    0   ...
+  0    1    0    0    1    0    0    0    0   ...
+  0    1    0    0    2    0    0    0    0   ...
+  0    1    0    1    0    0    0    0    0   ...
+  0    1    1    0    0    0    0    0    0   ...
+  0    2    0    0    0    0    0    0    0   ...
+  0    3    0    0    0    0    0    0    0   ...
+  0    4    0    0    0    0    0    0    0   ...
+  1    0    0    0    0    0    0    0    0   ...
+  1    0    0    0    1    0    0    0    0   ...
+  1    0    0    1    0    0    0    0    0   ...
+  1    1    0    0    0    0    0    0    0   ...
+  2    0    0    0    0    0    0    0    0   ...
+  3    0    0    0    0    0    0    0    0   ...
+-----------------------------------------
+Parametric enrichments: 9
+Index set length:       62
+Active parameters:      9
+
+Plotting expectation and variance...done
+
+-> Output mesh data saved to: datafiles/stoch_multilevel_final_meshes_and_sol.mat
+-> Output data saved to:      datafiles/stoch_multilevel_final_output.mat
+
+Plotting the effectivity indices...
+Using the precomputed reference solution with dof = 3441281...done
+
+To plot the meshes associated with individual indices run e.g. the command
+plot_mesh(meshesP{4}.evt,meshesP{4}.xy,'Final mesh associated with the 4-th index');
+
+>> plot_mesh(meshesP{2}.evt,meshesP{2}.xy,'Final mesh associated with the 2-nd index');
+>> plot_mesh(meshesP{20}.evt,meshesP{20}.xy,'Final mesh associated with the 20-th index');
+>> plot_mesh(meshesP{33}.evt,meshesP{33}.xy,'Final mesh associated with the 33-rd index');

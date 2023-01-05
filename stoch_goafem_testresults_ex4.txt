@@ -1,0 +1,763 @@
+stoch_goafem_testproblem
+
+Specification of goal-oriented example for adaptive SGFEM.
+Choose specific example:
+   1.  Square domain (-1,1)^2, Karhunen-Loeve expansion, symmetric Mommer-Stevenson example;
+   2.  Square domain (0,1)^2,  Eigel random coefficient, symmetric Mommer-Stevenson example;
+   3.  L-shaped domain, Eigel random coefficient, symmetric Mommer-Stevenson example;
+   4.  L-shaped domain, Eigel random coefficient, nonsymmetric Mommer-Stevenson example;
+   5.  Crack domain,    Eigel-Merdon-Neumann random coefficient, pointwise estimation;
+ : 4
+Tolerance (default 4.0e-04) : 
+Marking threshold parameters for Doerfler marking:
+   spatial parameter    (default 0.25) : 0.35
+   parametric parameter (default 0.90) : 
+
+Coarse grid generation for a L-shaped domain
+Structured/unstructured mesh 1/2 (default 1) : 
+Grid parameter: 2 for underlying 8x3 grid (default is 3 for 8x12) : 
+Grid stretch factor (>=1) (default is 1) : 
+
+Random variables distribution:
+Uniform or truncated Gaussian distribution 1/2? (default is 1) : 
+
+Eigel synthetic random coefficient expansion:
+Slow/fast coefficient decay 1/2 (default slow) : 
+Number of active random variables? (default is 1) : 
+Total polynomial degree? (default is 1) : 
+Extra active random variables in the detail index set? (default is 1) : 
+
+---------------------------------------------------------------------------
+Iteration 1
+---------------------------------------------------------------------------
+
+Mesh info:
+   Number of vertices: 65
+   Number of elements: 96
+
+Setting up stochastic P1 diffusion matrices...done (0.13419 sec)
+MINRES solution of the linear systems...
+LU(PQ) factorisation of K_0...done (0.000232 sec)
+Call to STOCH_EST_MINRES without error control...
+Bingo! Convergence in  11 iterations (0.01000 sec)
+
+Call to STOCH_EST_MINRES without error control...
+Bingo! Convergence in   9 iterations (0.01000 sec)
+
+Linear solver statistics:
+   Total ndof:         66
+   Minimum eigenvalue: 0.744
+Stochastic parameters:
+   Active parameters:  1
+   Polynomial degree:  1
+Primal solution:
+   Maximum mean value: 1.408e-01
+   Maximum variance:   2.892e-04
+   Energy norm:        4.4191e-01
+Dual solution:
+   Maximum mean value: 7.5222e-02
+   Maximum variance:   6.4409e-06
+   Energy norm:        1.3713e-01
+Goal-functional:       1.3691e-02
+
+A posteriori error estimation for P1 approximations:
+YP-error estimation:
+   YP-estimation (primal):   1.0855e-01
+   YP-estimation (dual):     7.5362e-02
+(YP-error estimation took 0.08256 sec)
+XQ-error estimation:
+   XQ-estimation (primal):   1.7292e-02
+   XQ-estimation (dual):     1.9124e-03
+(XQ-error estimation took 0.09478 sec)
+
+Total error estimate:        8.2865e-03
+
+Marking step (spatial and parametric):
+-> marked 4 edges out of total 160
+-> 4 overall marked edges out of total 160 (0.00242 sec)
+-> 1 overall marked indices out of total 3 (0.00058 sec)
+
+---------------------------------------------------------------------------
+Iteration 2
+---------------------------------------------------------------------------
+
+Local mesh refinement  (0.00621 sec)
+
+Mesh info:
+   Number of vertices: 69
+   Number of elements: 104
+
+Setting up stochastic P1 diffusion matrices...done (0.11372 sec)
+MINRES solution of the linear systems...
+LU(PQ) factorisation of K_0...done (0.000259 sec)
+Call to STOCH_EST_MINRES without error control...
+Bingo! Convergence in  11 iterations (0.02000 sec)
+
+Call to STOCH_EST_MINRES without error control...
+Bingo! Convergence in   9 iterations (0.03000 sec)
+
+Linear solver statistics:
+   Total ndof:         74
+   Minimum eigenvalue: 0.744
+Stochastic parameters:
+   Active parameters:  1
+   Polynomial degree:  1
+Primal solution:
+   Maximum mean value: 1.384e-01
+   Maximum variance:   3.071e-04
+   Energy norm:        4.4575e-01
+Dual solution:
+   Maximum mean value: 7.7208e-02
+   Maximum variance:   8.1545e-05
+   Energy norm:        1.4833e-01
+Goal-functional:       1.5063e-02
+
+A posteriori error estimation for P1 approximations:
+Updating edge lengths/connections (0.00191 sec)
+Updating spatial detail space Y   (0.00198 sec)
+YP-error estimation:
+   YP-estimation (primal):   1.0180e-01
+   YP-estimation (dual):     6.1465e-02
+(YP-error estimation took 0.07870 sec)
+XQ-error estimation:
+   XQ-estimation (primal):   1.8084e-02
+   XQ-estimation (dual):     5.2225e-03
+(XQ-error estimation took 0.09154 sec)
+
+Total error estimate:        6.3777e-03
+
+Marking step (spatial and parametric):
+-> marked 2 edges out of total 172
+-> 3 overall marked edges out of total 172 (0.00283 sec)
+-> 2 overall marked indices out of total 3 (0.00053 sec)
+
+---------------------------------------------------------------------------
+Iteration 3
+---------------------------------------------------------------------------
+
+Local mesh refinement  (0.00822 sec)
+
+Mesh info:
+   Number of vertices: 72
+   Number of elements: 110
+
+Setting up stochastic P1 diffusion matrices...done (0.11417 sec)
+MINRES solution of the linear systems...
+LU(PQ) factorisation of K_0...done (0.000273 sec)
+Call to STOCH_EST_MINRES without error control...
+Bingo! Convergence in  11 iterations (0.03000 sec)
+
+Call to STOCH_EST_MINRES without error control...
+Bingo! Convergence in  10 iterations (0.02000 sec)
+
+Linear solver statistics:
+   Total ndof:         80
+   Minimum eigenvalue: 0.744
+Stochastic parameters:
+   Active parameters:  1
+   Polynomial degree:  1
+Primal solution:
+   Maximum mean value: 1.405e-01
+   Maximum variance:   3.170e-04
+   Energy norm:        4.4767e-01
+Dual solution:
+   Maximum mean value: 7.2538e-02
+   Maximum variance:   8.2460e-05
+   Energy norm:        1.5419e-01
+Goal-functional:       1.5938e-02
+
+A posteriori error estimation for P1 approximations:
+Updating edge lengths/connections (0.00235 sec)
+Updating spatial detail space Y   (0.00154 sec)
+YP-error estimation:
+   YP-estimation (primal):   9.8460e-02
+   YP-estimation (dual):     5.1744e-02
+(YP-error estimation took 0.08522 sec)
+XQ-error estimation:
+   XQ-estimation (primal):   1.8792e-02
+   XQ-estimation (dual):     7.1944e-03
+(XQ-error estimation took 0.09817 sec)
+
+Total error estimate:        5.2366e-03
+
+Marking step (spatial and parametric):
+-> marked 10 edges out of total 181
+-> 15 overall marked edges out of total 181 (0.00345 sec)
+-> 2 overall marked indices out of total 3 (0.00155 sec)
+
+---------------------------------------------------------------------------
+Iteration 4
+---------------------------------------------------------------------------
+
+Local mesh refinement  (0.00667 sec)
+
+Mesh info:
+   Number of vertices: 87
+   Number of elements: 139
+
+Setting up stochastic P1 diffusion matrices...done (0.12040 sec)
+MINRES solution of the linear systems...
+LU(PQ) factorisation of K_0...done (0.000338 sec)
+Call to STOCH_EST_MINRES without error control...
+Bingo! Convergence in  12 iterations (0.03000 sec)
+
+Call to STOCH_EST_MINRES without error control...
+Bingo! Convergence in  11 iterations (0.03000 sec)
+
+Linear solver statistics:
+   Total ndof:         108
+   Minimum eigenvalue: 0.702
+Stochastic parameters:
+   Active parameters:  1
+   Polynomial degree:  1
+Primal solution:
+   Maximum mean value: 1.436e-01
+   Maximum variance:   3.280e-04
+   Energy norm:        4.5188e-01
+Dual solution:
+   Maximum mean value: 7.5673e-02
+   Maximum variance:   1.0258e-04
+   Energy norm:        1.5978e-01
+Goal-functional:       1.6632e-02
+
+A posteriori error estimation for P1 approximations:
+Updating edge lengths/connections (0.00142 sec)
+Updating spatial detail space Y   (0.00243 sec)
+YP-error estimation:
+   YP-estimation (primal):   8.9278e-02
+   YP-estimation (dual):     4.2213e-02
+(YP-error estimation took 0.08494 sec)
+XQ-error estimation:
+   XQ-estimation (primal):   1.9983e-02
+   XQ-estimation (dual):     8.4554e-03
+(XQ-error estimation took 0.09859 sec)
+
+Total error estimate:        3.9387e-03
+
+Marking step (spatial and parametric):
+-> marked 12 edges out of total 225
+-> 16 overall marked edges out of total 225 (0.00228 sec)
+-> 2 overall marked indices out of total 3 (0.00091 sec)
+
+---------------------------------------------------------------------------
+Iteration 5
+---------------------------------------------------------------------------
+
+Local mesh refinement  (0.00676 sec)
+
+Mesh info:
+   Number of vertices: 103
+   Number of elements: 168
+
+Setting up stochastic P1 diffusion matrices...done (0.12214 sec)
+MINRES solution of the linear systems...
+LU(PQ) factorisation of K_0...done (0.000404 sec)
+Call to STOCH_EST_MINRES without error control...
+Bingo! Convergence in  12 iterations (0.03000 sec)
+
+Call to STOCH_EST_MINRES without error control...
+Bingo! Convergence in  11 iterations (0.01000 sec)
+
+Linear solver statistics:
+   Total ndof:         134
+   Minimum eigenvalue: 0.709
+Stochastic parameters:
+   Active parameters:  1
+   Polynomial degree:  1
+Primal solution:
+   Maximum mean value: 1.440e-01
+   Maximum variance:   3.304e-04
+   Energy norm:        4.5455e-01
+Dual solution:
+   Maximum mean value: 7.6993e-02
+   Maximum variance:   1.1184e-04
+   Energy norm:        1.6237e-01
+Goal-functional:       1.7091e-02
+
+A posteriori error estimation for P1 approximations:
+Updating edge lengths/connections (0.00142 sec)
+Updating spatial detail space Y   (0.00175 sec)
+YP-error estimation:
+   YP-estimation (primal):   8.1829e-02
+   YP-estimation (dual):     3.5324e-02
+(YP-error estimation took 0.08773 sec)
+XQ-error estimation:
+   XQ-estimation (primal):   2.0308e-02
+   XQ-estimation (dual):     9.3354e-03
+(XQ-error estimation took 0.10263 sec)
+
+Total error estimate:        3.0804e-03
+
+Marking step (spatial and parametric):
+-> marked 16 edges out of total 270
+-> 32 overall marked edges out of total 270 (0.00313 sec)
+-> 2 overall marked indices out of total 3 (0.00129 sec)
+
+---------------------------------------------------------------------------
+Iteration 6
+---------------------------------------------------------------------------
+
+Local mesh refinement  (0.00651 sec)
+
+Mesh info:
+   Number of vertices: 135
+   Number of elements: 228
+
+Setting up stochastic P1 diffusion matrices...done (0.14743 sec)
+MINRES solution of the linear systems...
+LU(PQ) factorisation of K_0...done (0.000432 sec)
+Call to STOCH_EST_MINRES without error control...
+Bingo! Convergence in  12 iterations (0.04000 sec)
+
+Call to STOCH_EST_MINRES without error control...
+Bingo! Convergence in  12 iterations (0.04000 sec)
+
+Linear solver statistics:
+   Total ndof:         190
+   Minimum eigenvalue: 0.710
+Stochastic parameters:
+   Active parameters:  1
+   Polynomial degree:  1
+Primal solution:
+   Maximum mean value: 1.472e-01
+   Maximum variance:   3.480e-04
+   Energy norm:        4.5708e-01
+Dual solution:
+   Maximum mean value: 7.6908e-02
+   Maximum variance:   1.1561e-04
+   Energy norm:        1.6447e-01
+Goal-functional:       1.7339e-02
+
+A posteriori error estimation for P1 approximations:
+Updating edge lengths/connections (0.00140 sec)
+Updating spatial detail space Y   (0.00206 sec)
+YP-error estimation:
+   YP-estimation (primal):   7.5761e-02
+   YP-estimation (dual):     2.9010e-02
+(YP-error estimation took 0.09621 sec)
+XQ-error estimation:
+   XQ-estimation (primal):   2.1542e-02
+   XQ-estimation (dual):     9.6421e-03
+(XQ-error estimation took 0.11311 sec)
+
+Total error estimate:        2.4079e-03
+
+Marking step (spatial and parametric):
+-> marked 26 edges out of total 362
+-> 37 overall marked edges out of total 362 (0.00238 sec)
+-> 2 overall marked indices out of total 3 (0.00138 sec)
+
+---------------------------------------------------------------------------
+Iteration 7
+---------------------------------------------------------------------------
+
+Local mesh refinement  (0.01011 sec)
+
+Mesh info:
+   Number of vertices: 172
+   Number of elements: 298
+
+Setting up stochastic P1 diffusion matrices...done (0.14480 sec)
+MINRES solution of the linear systems...
+LU(PQ) factorisation of K_0...done (0.000582 sec)
+Call to STOCH_EST_MINRES without error control...
+Bingo! Convergence in  12 iterations (0.03000 sec)
+
+Call to STOCH_EST_MINRES without error control...
+Bingo! Convergence in  12 iterations (0.04000 sec)
+
+Linear solver statistics:
+   Total ndof:         256
+   Minimum eigenvalue: 0.705
+Stochastic parameters:
+   Active parameters:  1
+   Polynomial degree:  1
+Primal solution:
+   Maximum mean value: 1.477e-01
+   Maximum variance:   3.351e-04
+   Energy norm:        4.5934e-01
+Dual solution:
+   Maximum mean value: 7.7685e-02
+   Maximum variance:   1.2071e-04
+   Energy norm:        1.6564e-01
+Goal-functional:       1.7420e-02
+
+A posteriori error estimation for P1 approximations:
+Updating edge lengths/connections (0.00165 sec)
+Updating spatial detail space Y   (0.00222 sec)
+YP-error estimation:
+   YP-estimation (primal):   6.9525e-02
+   YP-estimation (dual):     2.4369e-02
+(YP-error estimation took 0.10324 sec)
+XQ-error estimation:
+   XQ-estimation (primal):   2.3076e-02
+   XQ-estimation (dual):     1.0067e-02
+(XQ-error estimation took 0.12056 sec)
+
+Total error estimate:        1.9315e-03
+
+Marking step (spatial and parametric):
+-> marked 42 edges out of total 469
+-> 59 overall marked edges out of total 469 (0.00246 sec)
+-> 2 overall marked indices out of total 3 (0.00148 sec)
+
+---------------------------------------------------------------------------
+Iteration 8
+---------------------------------------------------------------------------
+
+Local mesh refinement  (0.01025 sec)
+
+Mesh info:
+   Number of vertices: 231
+   Number of elements: 411
+
+Setting up stochastic P1 diffusion matrices...done (0.16119 sec)
+MINRES solution of the linear systems...
+LU(PQ) factorisation of K_0...done (0.000921 sec)
+Call to STOCH_EST_MINRES without error control...
+Bingo! Convergence in  12 iterations (0.04000 sec)
+
+Call to STOCH_EST_MINRES without error control...
+Bingo! Convergence in  12 iterations (0.03000 sec)
+
+Linear solver statistics:
+   Total ndof:         364
+   Minimum eigenvalue: 0.704
+Stochastic parameters:
+   Active parameters:  1
+   Polynomial degree:  1
+Primal solution:
+   Maximum mean value: 1.495e-01
+   Maximum variance:   3.374e-04
+   Energy norm:        4.6211e-01
+Dual solution:
+   Maximum mean value: 7.7800e-02
+   Maximum variance:   1.3062e-04
+   Energy norm:        1.6642e-01
+Goal-functional:       1.7545e-02
+
+A posteriori error estimation for P1 approximations:
+Updating edge lengths/connections (0.00261 sec)
+Updating spatial detail space Y   (0.00245 sec)
+YP-error estimation:
+   YP-estimation (primal):   5.8796e-02
+   YP-estimation (dual):     2.0601e-02
+(YP-error estimation took 0.11388 sec)
+XQ-error estimation:
+   XQ-estimation (primal):   2.4179e-02
+   XQ-estimation (dual):     1.0267e-02
+(XQ-error estimation took 0.13310 sec)
+
+Total error estimate:        1.4633e-03
+
+Marking step (spatial and parametric):
+-> marked 44 edges out of total 641
+-> 72 overall marked edges out of total 641 (0.00236 sec)
+-> 2 overall marked indices out of total 3 (0.00093 sec)
+
+---------------------------------------------------------------------------
+Iteration 9
+---------------------------------------------------------------------------
+
+Local mesh refinement  (0.01214 sec)
+
+Mesh info:
+   Number of vertices: 303
+   Number of elements: 540
+
+Setting up stochastic P1 diffusion matrices...done (0.18320 sec)
+MINRES solution of the linear systems...
+LU(PQ) factorisation of K_0...done (0.001146 sec)
+Call to STOCH_EST_MINRES without error control...
+Bingo! Convergence in  12 iterations (0.02000 sec)
+
+Call to STOCH_EST_MINRES without error control...
+Bingo! Convergence in  12 iterations (0.03000 sec)
+
+Linear solver statistics:
+   Total ndof:         478
+   Minimum eigenvalue: 0.702
+Stochastic parameters:
+   Active parameters:  1
+   Polynomial degree:  1
+Primal solution:
+   Maximum mean value: 1.498e-01
+   Maximum variance:   3.338e-04
+   Energy norm:        4.6407e-01
+Dual solution:
+   Maximum mean value: 7.8278e-02
+   Maximum variance:   1.3211e-04
+   Energy norm:        1.6689e-01
+Goal-functional:       1.7635e-02
+
+A posteriori error estimation for P1 approximations:
+Updating edge lengths/connections (0.00252 sec)
+Updating spatial detail space Y   (0.00239 sec)
+YP-error estimation:
+   YP-estimation (primal):   4.9256e-02
+   YP-estimation (dual):     1.7808e-02
+(YP-error estimation took 0.13119 sec)
+XQ-error estimation:
+   XQ-estimation (primal):   2.4596e-02
+   XQ-estimation (dual):     1.0359e-02
+(XQ-error estimation took 0.15135 sec)
+
+Total error estimate:        1.1342e-03
+
+Marking step (spatial and parametric):
+-> marked 68 edges out of total 842
+-> 100 overall marked edges out of total 842 (0.00374 sec)
+-> 2 overall marked indices out of total 3 (0.00086 sec)
+
+---------------------------------------------------------------------------
+Iteration 10
+---------------------------------------------------------------------------
+
+Local mesh refinement  (0.01344 sec)
+
+Mesh info:
+   Number of vertices: 403
+   Number of elements: 733
+
+Setting up stochastic P1 diffusion matrices...done (0.22026 sec)
+MINRES solution of the linear systems...
+LU(PQ) factorisation of K_0...done (0.001566 sec)
+Call to STOCH_EST_MINRES without error control...
+Bingo! Convergence in  12 iterations (0.04000 sec)
+
+Call to STOCH_EST_MINRES without error control...
+Bingo! Convergence in  12 iterations (0.03000 sec)
+
+Linear solver statistics:
+   Total ndof:         664
+   Minimum eigenvalue: 0.702
+Stochastic parameters:
+   Active parameters:  1
+   Polynomial degree:  1
+Primal solution:
+   Maximum mean value: 1.510e-01
+   Maximum variance:   3.383e-04
+   Energy norm:        4.6537e-01
+Dual solution:
+   Maximum mean value: 7.8264e-02
+   Maximum variance:   1.3213e-04
+   Energy norm:        1.6730e-01
+Goal-functional:       1.7683e-02
+
+A posteriori error estimation for P1 approximations:
+Updating edge lengths/connections (0.00258 sec)
+Updating spatial detail space Y   (0.00358 sec)
+YP-error estimation:
+   YP-estimation (primal):   4.2506e-02
+   YP-estimation (dual):     1.4644e-02
+(YP-error estimation took 0.15473 sec)
+XQ-error estimation:
+   XQ-estimation (primal):   2.4755e-02
+   XQ-estimation (dual):     1.0463e-02
+(XQ-error estimation took 0.17980 sec)
+
+Total error estimate:        8.8531e-04
+
+Marking step (spatial and parametric):
+-> marked 126 edges out of total 1135
+-> 198 overall marked edges out of total 1135 (0.00264 sec)
+-> 2 overall marked indices out of total 3 (0.00149 sec)
+
+---------------------------------------------------------------------------
+Iteration 11
+---------------------------------------------------------------------------
+
+Augmenting index set by
+ 0   1   0   0  ...
+ 2   0   0   0  ...
+
+Mesh info:
+   Number of vertices: 403
+   Number of elements: 733
+
+Setting up stochastic P1 diffusion matrices...done (0.28100 sec)
+MINRES solution of the linear systems...
+LU(PQ) factorisation of K_0...done (0.001457 sec)
+Call to STOCH_EST_MINRES without error control...
+Bingo! Convergence in  15 iterations (0.04000 sec)
+
+Call to STOCH_EST_MINRES without error control...
+Bingo! Convergence in  15 iterations (0.05000 sec)
+
+Linear solver statistics:
+   Total ndof:         1328
+   Minimum eigenvalue: 0.586
+Stochastic parameters:
+   Active parameters:  2
+   Polynomial degree:  2
+Primal solution:
+   Maximum mean value: 1.513e-01
+   Maximum variance:   3.817e-04
+   Energy norm:        4.6604e-01
+Dual solution:
+   Maximum mean value: 7.8359e-02
+   Maximum variance:   1.6149e-04
+   Energy norm:        1.6763e-01
+Goal-functional:       1.7744e-02
+
+A posteriori error estimation for P1 approximations:
+YP-error estimation:
+   YP-estimation (primal):   4.2740e-02
+   YP-estimation (dual):     1.4697e-02
+(YP-error estimation took 0.18001 sec)
+XQ-error estimation:
+Computing new 'Q' indset and GPQ matrices...done
+   XQ-estimation (primal):   1.0320e-02
+   XQ-estimation (dual):     5.1685e-03
+(XQ-error estimation took 0.22218 sec)
+
+Total error estimate:        6.8499e-04
+
+Marking step (spatial and parametric):
+-> marked 128 edges out of total 1135
+-> 202 overall marked edges out of total 1135 (0.00263 sec)
+-> 3 overall marked indices out of total 8 (0.00136 sec)
+
+---------------------------------------------------------------------------
+Iteration 12
+---------------------------------------------------------------------------
+
+Local mesh refinement  (0.02042 sec)
+
+Mesh info:
+   Number of vertices: 605
+   Number of elements: 1118
+
+Setting up stochastic P1 diffusion matrices...done (0.30198 sec)
+MINRES solution of the linear systems...
+LU(PQ) factorisation of K_0...done (0.002228 sec)
+Call to STOCH_EST_MINRES without error control...
+Bingo! Convergence in  15 iterations (0.05000 sec)
+
+Call to STOCH_EST_MINRES without error control...
+Bingo! Convergence in  15 iterations (0.05000 sec)
+
+Linear solver statistics:
+   Total ndof:         2060
+   Minimum eigenvalue: 0.586
+Stochastic parameters:
+   Active parameters:  2
+   Polynomial degree:  2
+Primal solution:
+   Maximum mean value: 1.522e-01
+   Maximum variance:   3.898e-04
+   Energy norm:        4.6706e-01
+Dual solution:
+   Maximum mean value: 7.8462e-02
+   Maximum variance:   1.6204e-04
+   Energy norm:        1.6792e-01
+Goal-functional:       1.7776e-02
+
+A posteriori error estimation for P1 approximations:
+Updating edge lengths/connections (0.00437 sec)
+Updating spatial detail space Y   (0.00437 sec)
+YP-error estimation:
+   YP-estimation (primal):   3.7453e-02
+   YP-estimation (dual):     1.2223e-02
+(YP-error estimation took 0.22040 sec)
+XQ-error estimation:
+   XQ-estimation (primal):   1.0696e-02
+   XQ-estimation (dual):     5.2196e-03
+(XQ-error estimation took 0.25455 sec)
+
+Total error estimate:        5.1770e-04
+
+Marking step (spatial and parametric):
+-> marked 157 edges out of total 1722
+-> 241 overall marked edges out of total 1722 (0.00335 sec)
+-> 3 overall marked indices out of total 8 (0.00077 sec)
+
+---------------------------------------------------------------------------
+Iteration 13
+---------------------------------------------------------------------------
+
+Local mesh refinement  (0.02414 sec)
+
+Mesh info:
+   Number of vertices: 846
+   Number of elements: 1582
+
+Setting up stochastic P1 diffusion matrices...done (0.37767 sec)
+MINRES solution of the linear systems...
+LU(PQ) factorisation of K_0...done (0.003308 sec)
+Call to STOCH_EST_MINRES without error control...
+Bingo! Convergence in  15 iterations (0.11000 sec)
+
+Call to STOCH_EST_MINRES without error control...
+Bingo! Convergence in  15 iterations (0.10000 sec)
+
+Linear solver statistics:
+   Total ndof:         2952
+   Minimum eigenvalue: 0.586
+Stochastic parameters:
+   Active parameters:  2
+   Polynomial degree:  2
+Primal solution:
+   Maximum mean value: 1.526e-01
+   Maximum variance:   3.864e-04
+   Energy norm:        4.6793e-01
+Dual solution:
+   Maximum mean value: 7.8492e-02
+   Maximum variance:   1.6625e-04
+   Energy norm:        1.6808e-01
+Goal-functional:       1.7805e-02
+
+A posteriori error estimation for P1 approximations:
+Updating edge lengths/connections (0.00461 sec)
+Updating spatial detail space Y   (0.00433 sec)
+YP-error estimation:
+   YP-estimation (primal):   3.1739e-02
+   YP-estimation (dual):     1.0533e-02
+(YP-error estimation took 0.26775 sec)
+XQ-error estimation:
+   XQ-estimation (primal):   1.1047e-02
+   XQ-estimation (dual):     5.2583e-03
+(XQ-error estimation took 0.31290 sec)
+
+Total error estimate:        3.9564e-04
+
+Marking step (spatial and parametric):
+-> marked 174 edges out of total 2427
+-> 250 overall marked edges out of total 2427 (0.00315 sec)
+-> 3 overall marked indices out of total 8 (0.00130 sec)
+
+--------------------------------------------------
+Tolerance reached!
+--------------------------------------------------
+
+Total elapsed time:                 7.246 sec
+Total iterations needed:            13
+Final error estimate:               3.9564e-04
+Final goal-functional:              1.7805e-02
+Final number of degrees of freedom: 2952
+Final number of elements:           1582
+Final number of total vertices:     846
+Final number of internal vertices:  738
+-----------------------------------------
+Evolution of the index set:
+  0    0   ...
+  1    0   ...
+  ------  iter = 11
+  0    1   ...
+  2    0   ...
+Sorted final index set:
+  0    0   ...
+  0    1   ...
+  1    0   ...
+  2    0   ...
+-----------------------------------------
+Parametric enrichments: 1
+Index set length:       4
+Active parameters:      2
+
+Plotting expectation, variance and estimated errors...done
+
+-> Output mesh data saved to: datafiles/stoch_goafem_final_mesh_info.mat
+-> Output data saved to:      datafiles/stoch_goafem_adaptive_output.mat
+
+To compute a reference goal-functional run the script stoch_goafem_refgoal_effindices

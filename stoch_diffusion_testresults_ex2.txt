@@ -1,0 +1,121 @@
+>> stoch_diff_testproblem
+
+Numerical solution of reference stochastic diffusion problem.
+Choose specific example:
+   1. Square domain (-1,1)^2, analytic KL expansion, non-constant source
+   2. Square domain (0,1)^2,  Eigel synthetic random coefficient, constant source
+   3. Square domain (0,1)^2,  Powell synthetic random coefficient, constant source
+   4. L-shaped domain, synthetic random coefficient, constant source
+   5. L-shaped domain, Eigel synthetic random coefficient, constant source
+   6. L-shaped domain, Powell synthetic random coefficient, constant source
+   7. Crack domain, Eigel synthetic random coefficient, constant source
+   8. Crack domain, Powell synthetic random coefficient, non-constant source
+   9. Square domain (0,1)^2, cookie problem, constant source
+ : 2
+
+P1/P2 approximation 1/2? (default P1) : 
+
+Spatial error estimation type:
+   1. hierarchical estimator (elementwise residual problem)
+   2. hierarchical estimator (fully assembled sysyem for residual problem)
+   3. 2-level estimator
+(default 1) : 
+
+Grid generation for a unit square domain
+Grid parameter: 2 for underlying 8x4 grid (default is 3 for 16x8) : 4
+
+Random variables distribution:
+Uniform or truncated Gaussian distribution 1/2? (default is 1) : 
+
+Using Eigel synthetic random coefficient expansion
+Slow/fast coefficient decay 1/2 (default slow) : 
+Number of active random variables? (default is 5) : 
+Total polynomial degree? (default is 3) : 
+Extra active random variables in the detail index set? (default is 1) : 
+
+Mesh info:
+   Number of vertices: 289
+   Number of elements: 512
+
+Setting up stochastic P1 diffusion matrices...done (0.11567 sec)
+MINRES solution of the linear systems:
+LU(PQ) factorisation of K_0...done (0.00959 sec)
+Call to STOCH_EST_MINRES without error control...
+Bingo! Convergence in  17 iterations (0.40000 sec)
+
+Eigenvalue convergence
+    k     lambda     Lambda 
+    3         NaN         NaN 
+    4      0.6931      1.3069 
+    5      0.6034      1.3966 
+    6      0.5669      1.4331 
+    7      0.5407      1.4593 
+    8      0.5252      1.4748 
+    9      0.5161      1.4839 
+   10      0.5101      1.4899 
+   11      0.5038      1.4962 
+   12      0.4979      1.5021 
+   13      0.4909      1.5091 
+   14      0.4850      1.5150 
+   15      0.4785      1.5215 
+   16      0.4739      1.5261 
+   17      0.4709      1.5291 
+
+Linear solver statistics:
+   Total ndof:         12600
+   Minimum eigenvalue: 0.470
+Stochastic parameters:
+   Active parameters:  5
+   Polynomial degree:  3
+Computed solution:
+   Maximum mean value: 7.5750e-02
+   Maximum variance:   4.9242e-05
+   Energy norm:        1.8901e-01
+
+A posteriori error estimation
+p/M/pM enrichment of the polynomial space 1/2/3? (default 3) : 
+YP-error estimation
+   Spatial hierarchical estimator (element residual problems)
+   yp estimate: intres = 1.7874e-02;  edgeres = 2.0158e-02
+   YP-error estimation took 0.65610 sec
+XQ-error estimation
+   computing new 'Q' indset and GPQ matrices... done
+   XQ-error estimation took 0.74374 sec
+
+Simplistic YP-estimate of energy error: 1.99654e-02
+Simplistic XQ-estimate of energy error: 9.60850e-04
+Simplistic estimate of energy error:    1.99885e-02
+
+Plotting expectation, variance and estimated errors...done
+
+To test other detail space options run stoch_diffpost
+>> stoch_diffpost
+
+A posteriori error estimation
+p/M/pM enrichment of the polynomial space 1/2/3? (default 3) : 2
+YP-error estimation
+   Spatial hierarchical estimator (element residual problems)
+   yp estimate: intres = 1.7874e-02;  edgeres = 2.0158e-02
+   YP-error estimation took 0.45229 sec
+XQ-error estimation
+   computing new 'Q' indset and GPQ matrices... done
+   XQ-error estimation took 0.49225 sec
+
+Simplistic YP-estimate of energy error: 1.99654e-02
+Simplistic XQ-estimate of energy error: 8.10911e-04
+Simplistic estimate of energy error:    1.99818e-02
+>> stoch_diffpost
+
+A posteriori error estimation
+p/M/pM enrichment of the polynomial space 1/2/3? (default 3) : 1
+YP-error estimation
+   Spatial hierarchical estimator (element residual problems)
+   yp estimate: intres = 1.7874e-02;  edgeres = 2.0158e-02
+   YP-error estimation took 0.40756 sec
+XQ-error estimation
+   computing new 'Q' indset and GPQ matrices... done
+   XQ-error estimation took 0.43507 sec
+
+Simplistic YP-estimate of energy error: 1.99654e-02
+Simplistic XQ-estimate of energy error: 5.15324e-04
+Simplistic estimate of energy error:    1.99720e-02
