@@ -46,7 +46,8 @@ Type <TT>install_tifiss</TT> and follow the on-screen instructions.
 After installation, type <TT>setpath</TT> and then <TT>helpme</TT> to get started.<br>
 
 The routines implementing stochastic Galerkin approximations for problems with random inputs
-are included in the sub-directory <TT>stoch_diffusion</TT>.<br>
+are included in the sub-directory <TT>stoch_diffusion</TT>.
+For help with setting up test problems, run <TT>helpme_stoch_diffusion.m</TT>.<br>
 
 Some sample sessions are saved in the following diary files:<br>
 <TT>stoch_diffusion_testresults_ex2.txt</TT><br>
