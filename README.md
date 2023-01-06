@@ -56,5 +56,4 @@ Some sample sessions are saved in the following diary files:<br>
 <TT>stoch_multilevel_testresults_ex9.txt</TT><br>
 
 To cite Stochastic T-IFISS in papers, please use:<br>
-Alex Bespalov and Leonardo Rocchi, Stochastic T-IFISS, January 2022.
-https://github.com/albespalov/Stochastic_T-IFISS/
+Alex Bespalov and Leonardo Rocchi, Stochastic T-IFISS, January 2022. Available online at https://github.com/albespalov/Stochastic_T-IFISS/.
