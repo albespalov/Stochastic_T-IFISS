@@ -21,6 +21,7 @@ The goal-oriented error estimation strategy and the associated goal-oriented ada
     <i>Computer Methods in Applied Mechanics and Engineering</i>, Vol. 345 (2019), pp. 951-982.<br>
     <a target="_blank" href="https://doi.org/10.1016/j.cma.2018.10.041">
     https://doi.org/10.1016/j.cma.2018.10.041</a><br>
+    Preprint<br>
     <a target="_blank" href="https://arxiv.org/abs/1806.03928">https://arxiv.org/abs/1806.03928</a>
   </li>
 </ul>
@@ -32,6 +33,7 @@ An a posteriori error estimator for multilevel stochastic Galerkin approximation
     Two-level a posteriori error estimation for adaptive multilevel stochastic Galerkin FEM,
     <i>SIAM/ASA Journal on Uncertainty Quantification</i>, Vol. 9 (2021), Issue 3, pp. 1184-1216.<br>
     <a target="_blank" href="https://doi.org/10.1137/20M1342586">https://doi.org/10.1137/20M1342586</a><br>
+    Preprint<br>
     <a target="_blank" href="https://arxiv.org/abs/2006.02255">https://arxiv.org/abs/2006.02255</a>
   </li>
 </ul>
